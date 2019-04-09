@@ -1,4 +1,4 @@
-# Augur
+# Augur: Group 7
 
 branch | status
    --- | ---
