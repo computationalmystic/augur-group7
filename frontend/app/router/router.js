@@ -17,6 +17,7 @@ import MainControls from '../components/MainControls.vue'
 import AugurHeader from '../components/AugurHeader.vue'
 import Tabs from '../components/Tabs.vue'
 import TableView from '../components/TableView.vue'
+import IntroductionPage from '../components/IntroductionPage.vue'
 
 let routes = [
         {path: '/', component: AugurCards,
@@ -31,6 +32,7 @@ let routes = [
           },
         ]
       },
+      {path: '/Intro', component: IntroductionPage},
       {path: '/login', component: LoginForm},
       {path: '/metrics_status', 
         component: MetricsStatusCard
