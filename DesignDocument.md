@@ -10,7 +10,7 @@
 * Form input from user
 ### Functions:
 * In the template in IntroductionPage.vue component:
-```
+```HTML
 <section>
   <div id="row">
     <h3>Introduction Page</h3>
@@ -69,7 +69,7 @@
 </section>
 ```
 * In script tag in IntroductionPage.vue component:
-```
+```HTML
 <script>
 
 import DynamicLineChart from './charts/DynamicLineChart'
@@ -88,11 +88,11 @@ module.exports = {
 </script>
 ```
 * In Router.js:
-```
+```HTML
 import IntroductionPage from '../components/IntroductionPage.vue'
 ```
 and
-```
+```HTML
  children: [
           {
             path: "intro",
@@ -106,7 +106,7 @@ and
           },
 ```
 * In the Tabs.vue component template:
-```
+```HTML
 <li :class="{ active: (currentTab == 'intro') }"><a href="#" @click="changeTab" data-value="intro">Introduction</a></li>
 ```
 ## Show clearly how the different software components communicate
