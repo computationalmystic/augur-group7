@@ -38,6 +38,13 @@
           cite-text="Watchers"> 
       </dynamic-line-chart>
     </div>
+      <div class="col col-6">
+        <dynamic-line-chart source="openIssues"
+          title="Open Issues / Week"
+          cite-url="https://github.com/augurlabs/wg-gmd/blob/master/activity-metrics/open-issues.md"
+          cite-text="Issues Open">
+        </dynamic-line-chart>
+      </div>
   </div>
 </section>
 
