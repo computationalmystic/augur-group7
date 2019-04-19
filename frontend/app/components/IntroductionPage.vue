@@ -2,7 +2,7 @@
 <section>
   <div id="row">
     <h3>Introduction Page</h3>
-      <div class="col col-6">
+      <div class="col col-6 input">
         <h4>Description</h4>
         <textarea rows="4" cols="50">
 
@@ -14,7 +14,7 @@
           </div>
         </form>
       </div>
-      <div class="col col-6">    
+      <div class="col col-6 input">    
         <h4>Languages</h4>  
         <textarea rows="4" cols="50">
 
@@ -74,9 +74,6 @@ module.exports = {
 <style scoped>
 
   .input {
-   padding-top: 10%;
-   padding-bottom: 10%;
-   padding-right:10%;
    display:inline-block;
   }
 
