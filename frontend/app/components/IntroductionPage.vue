@@ -1,6 +1,6 @@
 <template>
 <section>
-  <div id="wrapper">
+  <div id="row">
     <h3>Introduction Page</h3>
       <div class="input">
         <h4>Description</h4>
