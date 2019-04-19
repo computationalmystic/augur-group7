@@ -1,11 +1,11 @@
 <template>
 
-div id="wrapper">
+<div id="wrapper">
   <h3>Introduction Page</h3>
     <div class="input">
       <h4>Description</h4>
       <textarea rows="4" cols="50">
-      Description
+
       </textarea> 
 
       <form>
@@ -17,7 +17,7 @@ div id="wrapper">
     <div class="input">    
       <h4>Languages</h4>  
       <textarea rows="4" cols="50">
-      Languages
+
       </textarea> 
 
       <form>
@@ -32,8 +32,6 @@ div id="wrapper">
 </div>
 
 </template>
-
-
 
 <script>
 
@@ -64,9 +62,14 @@ div id="wrapper">
   }
 
 
-
 </script>
 
 <style scoped>
+
+  .input {
+   padding-bottom: 10%;
+   padding-right:10%;
+   display:inline-block;
+  }
 
 </style>
