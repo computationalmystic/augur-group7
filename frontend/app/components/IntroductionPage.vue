@@ -61,8 +61,6 @@
 <script>
 
 import DynamicLineChart from './charts/DynamicLineChart'
-import BubbleChart from './charts/BubbleChart'
-import StackedBarChart from './charts/StackedBarChart'
 
 module.exports = {
   data() {
@@ -71,9 +69,7 @@ module.exports = {
     }
   },
   components: {
-    DynamicLineChart,
-    BubbleChart,
-    StackedBarChart
+    DynamicLineChart
   }
 };
 
