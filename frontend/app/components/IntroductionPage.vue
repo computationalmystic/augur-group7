@@ -2,7 +2,7 @@
 <section>
   <div id="row">
     <h3>Introduction Page</h3>
-      <div class="input">
+      <div class="col col-6">
         <h4>Description</h4>
         <textarea rows="4" cols="50">
 
@@ -14,7 +14,7 @@
           </div>
         </form>
       </div>
-      <div class="input">    
+      <div class="col col-6">    
         <h4>Languages</h4>  
         <textarea rows="4" cols="50">
 
