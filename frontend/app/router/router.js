@@ -17,6 +17,7 @@ import MainControls from '../components/MainControls.vue'
 import AugurHeader from '../components/AugurHeader.vue'
 import Tabs from '../components/Tabs.vue'
 import TableView from '../components/TableView.vue'
+import IntroductionPage from '../components/IntroductionPage.vue'
 
 let routes = [
         {path: '/', component: AugurCards,
@@ -37,6 +38,16 @@ let routes = [
       }, 
       {path: '/single/:owner?/:repo', name: 'single', props: true, canReuse: false, component: AugurCards,
         children: [
+          {
+            path: "intro",
+            name: "intro",
+            components: {
+              header: AugurHeader,
+              tabs: Tabs,
+              controls: MainControls,
+              content: IntroductionPage
+            }
+          },
           {
             path: "gmd",
             name: "gmd",
