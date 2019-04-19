@@ -1,39 +1,52 @@
 <template>
+<section>
+  <div id="wrapper">
+    <h3>Introduction Page</h3>
+      <div class="input">
+        <h4>Description</h4>
+        <textarea rows="4" cols="50">
 
-<div id="wrapper">
-  <h3>Introduction Page</h3>
-    <div class="input">
-      <h4>Description</h4>
-      <textarea rows="4" cols="50">
+        </textarea> 
 
-      </textarea> 
+        <form>
+          <div id="submit_button">
+            <button class="submit" type="submit">Submit</button>
+          </div>
+        </form>
+      </div>
+      <div class="input">    
+        <h4>Languages</h4>  
+        <textarea rows="4" cols="50">
 
-      <form>
-        <div id="submit_button">
-          <button class="submit" type="submit">Submit</button>
-        </div>
-      </form>
-    </div>
-    <div class="input">    
-      <h4>Languages</h4>  
-      <textarea rows="4" cols="50">
+        </textarea> 
 
-      </textarea> 
+        <form>
+          <div id="submit_button">
+            <button class="submit" type="submit">Submit</button>
+          </div>
+        </form>
+      </div>
+      <div id="issues">
+      <h4>Issues For Newcomers</h4>
+      </div>
+  </div>
 
-      <form>
-        <div id="submit_button">
-          <button class="submit" type="submit">Submit</button>
-        </div>
-      </form>
-    </div>
-    <div id="issues">
-    <h4>Issues For Newcomers</h4>
-    </div>
-</div>
+  <div class="col col-6">
+    <dynamic-line-chart source="watchers" 
+       title="Watchers / Week " 
+        cite-url="https://github.com/augurlabs/wg-gmd/tree/master/activity-metrics/watchers.md"
+        cite-text="Watchers"> 
+    </dynamic-line-chart>
+  </div>
+</section>
 
 </template>
 
 <script>
+
+import DynamicLineChart from './charts/DynamicLineChart'
+import BubbleChart from './charts/BubbleChart'
+import StackedBarChart from './charts/StackedBarChart'
 
   module.exports = {
 
@@ -67,6 +80,7 @@
 <style scoped>
 
   .input {
+   padding-top: 10%;
    padding-bottom: 10%;
    padding-right:10%;
    display:inline-block;
