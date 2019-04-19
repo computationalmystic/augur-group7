@@ -88,11 +88,11 @@ module.exports = {
 </script>
 ```
 * In Router.js:
-```HTML
+```javascript
 import IntroductionPage from '../components/IntroductionPage.vue'
 ```
 and
-```HTML
+```javascript
  children: [
           {
             path: "intro",
