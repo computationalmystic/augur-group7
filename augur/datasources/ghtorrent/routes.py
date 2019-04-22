@@ -63,6 +63,10 @@ def create_routes(server):
                             }
                         ]
     """
+    @server.app.route('/{}/shutdown'.format(server.api_version), methods=['POST'])
+    def post_data():
+        return("posting data")
+
     server.addTimeseries(ghtorrent.code_commits, 'commits')
 
     """

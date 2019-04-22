@@ -1,23 +1,16 @@
 <template>
 <section>
   <div id="row">
-    <h3>Introduction Page</h3>
+    <h3>Introduction Pages</h3>
       <div class="col col-6 input">
         <h4>Description</h4>
         <textarea rows="4" cols="50">
-
         </textarea> 
 
-        <form>
-          <div id="submit_button">
-            <button class="submit" type="submit">Submit</button>
-          </div>
-        </form>
       </div>
       <div class="col col-6 input">    
         <h4>Languages</h4>  
         <textarea rows="4" cols="50">
-
         </textarea> 
 
         <form>
