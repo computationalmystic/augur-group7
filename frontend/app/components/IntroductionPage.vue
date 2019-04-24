@@ -1,7 +1,7 @@
 <template>
 <section>
   <div id="row">
-    <h3>Introduction Pages</h3>
+    <h3>Introduction Page</h3>
       
       <div class="input">
         <h4>Description</h4>
