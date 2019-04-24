@@ -133,6 +133,22 @@ class GHTorrent(object):
             userid = row[0]
         return userid
 
+    @annotate(tag='getLanguage')
+    def getLanguage(self, project_id):
+        """
+        Returns the userid given a username
+
+        :param username: GitHub username to be matched against the login table in GHTorrent
+        :return: The id from the users table in GHTorrent
+        """
+        reposql = s.sql.text('SELECT project_languages.language FROM project_languages WHERE project_languages.project_id = :project_id')
+        language = 0
+        result = self.db.execute(reposql, project_id=project_id)
+        for row in result:
+            language = row[0]
+        return language
+
+
     #####################################
     ###    DIVERSITY AND INCLUSION    ###
     #####################################

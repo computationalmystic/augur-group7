@@ -26,6 +26,15 @@
   </div>
   <div class="row">
     <div class="col col-6">
+      <dynamic-line-chart source="getLanguage"
+        title="Languages"
+        cite-url=""
+        cite-text="Open Issues"
+        disable-rolling-average=1>
+      </dynamic-line-chart>
+    </div>
+  <div class="row">
+    <div class="col col-6">
       <dynamic-line-chart source="communityEngagement:issues_open"
         title="Community Engagement: Open Issues"
         cite-url="https://github.com/augurlabs/wg-gmd/blob/master/activity-metrics/open-issues.md"
@@ -55,6 +64,8 @@
 <script>
 
 import DynamicLineChart from './charts/DynamicLineChart'
+
+import 
 
 module.exports = {
   data() {
