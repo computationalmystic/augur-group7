@@ -834,3 +834,4 @@ def create_routes(server):
                         status=200,
                         mimetype="application/json")
     # server.updateMetricMetadata(ghtorrent.ghtorrent_range, '/{}/ghtorrent_range'.format(server.api_version))
+    server.addMetric(ghtorrent.getLanguage, 'getLanguage')

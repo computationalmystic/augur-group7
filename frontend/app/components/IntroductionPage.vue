@@ -66,8 +66,6 @@
 
 import DynamicLineChart from './charts/DynamicLineChart'
 
-import 
-
 module.exports = {
   data() {
     return {
