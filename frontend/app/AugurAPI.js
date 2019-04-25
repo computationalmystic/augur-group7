@@ -226,8 +226,10 @@ export default class AugurAPI {
     }
 
     if (repo.owner && repo.name) {
+
       //Introduction
       Endpoint(repo, 'getLanguage', 'get_Language')
+
       // DIVERSITY AND INCLUSION
 
       // GROWTH, MATURITY, AND DECLINE
