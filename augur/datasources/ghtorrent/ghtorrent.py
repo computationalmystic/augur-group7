@@ -143,12 +143,7 @@ class GHTorrent(object):
         """
         repoid=self.repoid(owner,repo)
         reposql = s.sql.text('SELECT project_languages.language FROM project_languages WHERE project_languages.project_id = :repoid')
-        language = 0
-        result = self.db.execute(reposql, repoid=repoid)
-        for row in result:
-            language = row[0]
-        return language
-
+        return pd.read_sql(reposql,self.db, params={"repoid": str(repoid)})
 
     #####################################
     ###    DIVERSITY AND INCLUSION    ###
