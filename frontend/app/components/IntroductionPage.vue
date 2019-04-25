@@ -33,6 +33,7 @@
         disable-rolling-average=1>
       </dynamic-line-chart>
     </div>
+  </div>
   <div class="row">
     <div class="col col-6">
       <dynamic-line-chart source="communityEngagement:issues_open"
