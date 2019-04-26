@@ -1,7 +1,6 @@
 <template>
 <section>
   <div id="row">
-    <h3>Introduction Page</h3>
     <div>
     <h2 style="display: inline-block; color: black !important">{{ $store.state.gitRepo }}</h2>
     </div>
