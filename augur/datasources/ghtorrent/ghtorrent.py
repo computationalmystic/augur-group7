@@ -167,7 +167,7 @@ class GHTorrent(object):
         """
         repoid=self.repoid(owner,repo)
         reposql = s.sql.text('SELECT projects.name FROM projects WHERE projects.id = :repoid')
-        reposql2 = s.sql.text('SELECT COUNT (5) issues.issue_id FROM issues WHERE issues.repo_id = :repoid ORDER BY created_at DESC')
+        reposql2 = s.sql.text('SELECT issues.issue_id FROM issues WHERE issues.repo_id = :repoid ORDER BY created_at DESC LIMIT 5')
         repoJSON = pd.read_sql(reposql, self.db, params={"repoid": str(repoid)})
         repoJSON2 = pd.read_sql(reposql2, self.db, params={"repoid": str(repoid)})
         repoJSON3 = [repoJSON, repoJSON2]
