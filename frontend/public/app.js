@@ -703,6 +703,11 @@ var AugurAPI = function () {
       };
 
       if (repo.owner && repo.name) {
+
+        //Introduction
+        toString(repo, 'getLanguage', 'get_Language');
+        toString(repo, 'getDescription', 'get_Description');
+
         // DIVERSITY AND INCLUSION
 
         // GROWTH, MATURITY, AND DECLINE
@@ -1638,30 +1643,33 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
 ;require.register("components/IntroductionPage.vue", function(exports, require, module) {
 var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert(".input[data-v-95bdd494] {\n display: inline-block;\n width: 49%;\n padding-bottom: 50px;\n padding-top: 50px;\n}")
 ;(function(){
-"use strict";
+'use strict';
 
-var _DynamicLineChart = require("./charts/DynamicLineChart");
+var _DynamicLineChart = require('./charts/DynamicLineChart');
 
 var _DynamicLineChart2 = _interopRequireDefault(_DynamicLineChart);
+
+var _LanguageListChart = require('./charts/LanguageListChart');
+
+var _LanguageListChart2 = _interopRequireDefault(_LanguageListChart);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 module.exports = {
   data: function data() {
-    return {
-      colors: ["#FF3647", "#4736FF", "#3cb44b", "#ffe119", "#f58231", "#911eb4", "#42d4f4", "#f032e6"]
-    };
+    return {};
   },
 
   components: {
-    DynamicLineChart: _DynamicLineChart2.default
+    DynamicLineChart: _DynamicLineChart2.default,
+    LanguageListChart: _LanguageListChart2.default
   }
 };
 })()
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('section',[_vm._m(0),_vm._v(" "),_vm._m(1),_vm._v(" "),_c('div',{staticClass:"row"},[_c('div',{staticClass:"col col-6"},[_c('dynamic-line-chart',{attrs:{"source":"communityEngagement:issues_open","title":"Community Engagement: Open Issues","cite-url":"https://github.com/augurlabs/wg-gmd/blob/master/activity-metrics/open-issues.md","cite-text":"Open Issues","disable-rolling-average":"1"}})],1),_vm._v(" "),_c('div',{staticClass:"col col-6"},[_c('dynamic-line-chart',{attrs:{"source":"watchers","title":"Watchers / Week ","cite-url":"https://github.com/augurlabs/wg-gmd/tree/master/activity-metrics/watchers.md","cite-text":"Watchers"}})],1),_vm._v(" "),_c('div',{staticClass:"col col-6"},[_c('dynamic-line-chart',{attrs:{"source":"openIssues","title":"Open Issues / Week","cite-url":"https://github.com/augurlabs/wg-gmd/blob/master/activity-metrics/open-issues.md","cite-text":"Issues Open"}})],1)])])}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('section',[_vm._m(0),_vm._v(" "),_vm._m(1),_vm._v(" "),_c('div',{staticClass:"row"},[_c('div',{staticClass:"col col-6"},[_c('dynamic-line-chart',{attrs:{"source":"getLanguage","title":"Languages","cite-url":"","cite-text":"","disable-rolling-average":"1"}})],1)]),_vm._v(" "),_c('div',{staticClass:"row"},[_c('div',{staticClass:"col col-6"},[_c('language-list-chart',{attrs:{"source":"getLanguage","title":"Languages Test","cite-url":"","cite-text":"","disable-rolling-average":"1"}})],1)]),_vm._v(" "),_c('div',{staticClass:"row"},[_c('div',{staticClass:"col col-6"},[_c('dynamic-line-chart',{attrs:{"source":"communityEngagement:issues_open","title":"Community Engagement: Open Issues","cite-url":"https://github.com/augurlabs/wg-gmd/blob/master/activity-metrics/open-issues.md","cite-text":"Open Issues","disable-rolling-average":"1"}})],1),_vm._v(" "),_c('div',{staticClass:"col col-6"},[_c('dynamic-line-chart',{attrs:{"source":"watchers","title":"Watchers / Week ","cite-url":"https://github.com/augurlabs/wg-gmd/tree/master/activity-metrics/watchers.md","cite-text":"Watchers"}})],1),_vm._v(" "),_c('div',{staticClass:"col col-6"},[_c('dynamic-line-chart',{attrs:{"source":"openIssues","title":"Open Issues / Week","cite-url":"https://github.com/augurlabs/wg-gmd/blob/master/activity-metrics/open-issues.md","cite-text":"Issues Open"}})],1)])])}
 __vue__options__.staticRenderFns = [function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{attrs:{"id":"row"}},[_c('h3',[_vm._v("Introduction Page")]),_vm._v(" "),_c('div',{staticClass:"input"},[_c('h4',[_vm._v("Description")]),_vm._v(" "),_c('textarea',{attrs:{"rows":"5"}})]),_vm._v(" "),_c('div',{staticClass:"input"},[_c('h4',[_vm._v("Languages")]),_vm._v(" "),_c('textarea',{attrs:{"rows":"5"}})]),_vm._v(" "),_c('form',[_c('div',{attrs:{"id":"submit_button"}},[_c('button',{staticClass:"submit",attrs:{"type":"submit"}},[_vm._v("Submit")])])])])},function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{attrs:{"id":"issues"}},[_c('h4',[_vm._v("Issues For Newcomers")])])}]
 __vue__options__._scopeId = "data-v-95bdd494"
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
@@ -4817,6 +4825,80 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
     hotAPI.createRecord("data-v-8d346828", __vue__options__)
   } else {
     hotAPI.reload("data-v-8d346828", __vue__options__)
+  }
+})()}
+});
+
+;require.register("components/charts/LanguageListChart.vue", function(exports, require, module) {
+;(function(){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _vuex = require('vuex');
+
+var _AugurStats = require('AugurStats');
+
+var _AugurStats2 = _interopRequireDefault(_AugurStats);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = {
+  props: ['source', 'citeUrl', 'citeText', 'title', 'disableRollingAverage', 'alwaysByDate', 'data'],
+  data: function data() {
+    return {
+      values: []
+    };
+  },
+
+  computed: {
+    repo: function repo() {
+      return this.$store.state.baseRepo;
+    },
+    spec: function spec() {
+      var _this = this;
+
+      var repo = window.AugurAPI.Repo({ githubURL: this.repo });
+      repo[this.source]().then(function (data) {
+        console.log("HERE", data);
+        _this.values = data;
+      });
+
+      var config = {
+        "$schema": "https://vega.github.io/schema/vega-lite/v2.json",
+        "width": 950,
+        "height": 300,
+        "mark": "line",
+        "encoding": {
+          "x": {
+            "field": "date", "type": "temporal"
+          },
+          "y": {
+            "field": "value", "type": "quantitative"
+          }
+        }
+      };
+      return config;
+    }
+  },
+  methods: {}
+};
+})()
+if (module.exports.__esModule) module.exports = module.exports.default
+var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
+if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{ref:"holder",staticStyle:{"position":"relative","z-index":"5"}},[_c('div',{staticClass:"chart"},[_c('h3',{staticStyle:{"text-align":"center"}},[_vm._v(_vm._s(_vm.title))]),_vm._v(" "),_c('vega-lite',{attrs:{"spec":_vm.spec,"data":_vm.values}}),_vm._v(" "),_c('p',[_vm._v(" "+_vm._s(_vm.chart)+" ")])],1)])}
+__vue__options__.staticRenderFns = []
+if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), true)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-99f3934a", __vue__options__)
+  } else {
+    hotAPI.reload("data-v-99f3934a", __vue__options__)
   }
 })()}
 });

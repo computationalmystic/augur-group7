@@ -36,6 +36,16 @@
   </div>
   <div class="row">
     <div class="col col-6">
+      <language-list-chart source="getLanguage"
+        title="Languages Test"
+        cite-url=""
+        cite-text=""
+        disable-rolling-average=1>
+      </language-list-chart>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col col-6">
       <dynamic-line-chart source="communityEngagement:issues_open"
         title="Community Engagement: Open Issues"
         cite-url="https://github.com/augurlabs/wg-gmd/blob/master/activity-metrics/open-issues.md"
@@ -65,15 +75,17 @@
 <script>
 
 import DynamicLineChart from './charts/DynamicLineChart'
+import LanguageListChart from './charts/LanguageListChart'
 
 module.exports = {
   data() {
     return {
-      colors: ["#FF3647", "#4736FF","#3cb44b","#ffe119","#f58231","#911eb4","#42d4f4","#f032e6"]
+      //colors: ["#FF3647", "#4736FF","#3cb44b","#ffe119","#f58231","#911eb4","#42d4f4","#f032e6"]
     }
   },
   components: {
-    DynamicLineChart
+    DynamicLineChart,
+    LanguageListChart
   }
 };
 
