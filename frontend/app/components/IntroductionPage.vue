@@ -24,16 +24,10 @@
       <h4>Issues For Newcomers</h4>
       </div>
   </div>
-  <div class="row">
-    <div class="col col-6">
-      <dynamic-line-chart source="getLanguage"
-        title="Languages"
-        cite-url=""
-        cite-text=""
-        disable-rolling-average=1>
-      </dynamic-line-chart>
-    </div>
-  </div>
+  print"Hello"
+
+print(source="getLanguage")
+
   <div class="row">
     <div class="col col-6">
       <dynamic-line-chart source="communityEngagement:issues_open"
