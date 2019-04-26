@@ -133,8 +133,6 @@ class GHTorrent(object):
             userid = row[0]
         return userid
 
-<<<<<<< HEAD
-=======
     @annotate(tag='getLanguage')
     def getLanguage(self, owner, repo):
         """
@@ -159,8 +157,6 @@ class GHTorrent(object):
         reposql = s.sql.text('SELECT projects.description FROM projects WHERE projects.id = :repoid')
         return pd.read_sql(reposql, self.db, params={"repoid": str(repoid)})
 
-
->>>>>>> origin/Drew
     #####################################
     ###    DIVERSITY AND INCLUSION    ###
     #####################################
