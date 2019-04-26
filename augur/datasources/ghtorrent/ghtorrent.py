@@ -166,7 +166,7 @@ class GHTorrent(object):
         :return: The languages from the users table in GHTorrent
         """
         repoid=self.repoid(owner,repo)
-        reposql = s.sql.text('SELECT projects.url FROM projects WHERE projects.id = :repoid' + "/issues/" + 'SELECT issues.issue_id FROM issues WHERE issues.id = :repoid')
+        reposql = s.sql.text('SELECT projects.url FROM projects WHERE projects.id = :repoid' + '/issues/' + 'SELECT issues.issue_id FROM issues WHERE issues.id = :repoid')
         return pd.read_sql(reposql, self.db, params={"repoid": str(repoid)})
 
     #####################################
