@@ -2,7 +2,9 @@
 <section>
   <div id="row">
     <h3>Introduction Page</h3>
-    <h2 style="display: inline-block; color: black !important">{{ $store.state.gitRepo }}</h2>  
+    <div>
+    <h2 style="display: inline-block; color: black !important">{{ $store.state.gitRepo }}</h2>
+    </div>
       <div class="input">
         <h4>Description</h4>
         <textarea rows="5">
