@@ -1,6 +1,10 @@
 <template>
   <nav class="tabs">
         <ul>
+<<<<<<< HEAD
+=======
+          <li :class="{ active: (currentTab == 'intro') }"><a href="#" @click="changeTab" data-value="intro">Introduction</a></li>
+>>>>>>> origin/Drew
           <li :class="{ active: (currentTab == 'gmd') }"><a href="#" @click="changeTab" data-value="gmd">Growth, Maturity, and Decline</a></li>
           <li :class="{ active: (currentTab == 'diversityinclusion') }"><a href="#" @click="changeTab" data-value="diversityinclusion">Diversity and Inclusion</a></li>
           <li :class="{ active: (currentTab == 'risk') }"><a href="#" @click="changeTab" data-value="risk">Risk</a></li>

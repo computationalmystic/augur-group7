@@ -1636,6 +1636,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
 });
 
 ;require.register("components/IntroductionPage.vue", function(exports, require, module) {
+<<<<<<< HEAD
 ;(function(){
 'use strict';
 
@@ -1729,18 +1730,49 @@ exports.default = {
     this.selected_is_defined = 'all';
     this.getMetricsStatus();
     this.getMetricsStatusMetadata();
+=======
+var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert(".input[data-v-95bdd494] {\n display: inline-block;\n width: 49%;\n padding-bottom: 50px;\n padding-top: 50px;\n}")
+;(function(){
+"use strict";
+
+var _DynamicLineChart = require("./charts/DynamicLineChart");
+
+var _DynamicLineChart2 = _interopRequireDefault(_DynamicLineChart);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+module.exports = {
+  data: function data() {
+    return {
+      colors: ["#FF3647", "#4736FF", "#3cb44b", "#ffe119", "#f58231", "#911eb4", "#42d4f4", "#f032e6"]
+    };
+  },
+
+  components: {
+    DynamicLineChart: _DynamicLineChart2.default
+>>>>>>> origin/Drew
   }
 };
 })()
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
+<<<<<<< HEAD
 __vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"is-table-container"},[_c('div',{staticClass:"fullwidth"},[_c('augur-header')],1),_vm._v(" "),_vm._m(0)])}
 __vue__options__.staticRenderFns = [function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('section',[_c('h3',[_vm._v("Augur Introduction Page")])])}]
+=======
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('section',[_vm._m(0),_vm._v(" "),_vm._m(1),_vm._v(" "),_c('div',{staticClass:"row"},[_c('div',{staticClass:"col col-6"},[_c('dynamic-line-chart',{attrs:{"source":"communityEngagement:issues_open","title":"Community Engagement: Open Issues","cite-url":"https://github.com/augurlabs/wg-gmd/blob/master/activity-metrics/open-issues.md","cite-text":"Open Issues","disable-rolling-average":"1"}})],1),_vm._v(" "),_c('div',{staticClass:"col col-6"},[_c('dynamic-line-chart',{attrs:{"source":"watchers","title":"Watchers / Week ","cite-url":"https://github.com/augurlabs/wg-gmd/tree/master/activity-metrics/watchers.md","cite-text":"Watchers"}})],1),_vm._v(" "),_c('div',{staticClass:"col col-6"},[_c('dynamic-line-chart',{attrs:{"source":"openIssues","title":"Open Issues / Week","cite-url":"https://github.com/augurlabs/wg-gmd/blob/master/activity-metrics/open-issues.md","cite-text":"Issues Open"}})],1)])])}
+__vue__options__.staticRenderFns = [function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{attrs:{"id":"row"}},[_c('h3',[_vm._v("Introduction Page")]),_vm._v(" "),_c('div',{staticClass:"input"},[_c('h4',[_vm._v("Description")]),_vm._v(" "),_c('textarea',{attrs:{"rows":"5"}})]),_vm._v(" "),_c('div',{staticClass:"input"},[_c('h4',[_vm._v("Languages")]),_vm._v(" "),_c('textarea',{attrs:{"rows":"5"}})]),_vm._v(" "),_c('form',[_c('div',{attrs:{"id":"submit_button"}},[_c('button',{staticClass:"submit",attrs:{"type":"submit"}},[_vm._v("Submit")])])])])},function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{attrs:{"id":"issues"}},[_c('h4',[_vm._v("Issues For Newcomers")])])}]
+__vue__options__._scopeId = "data-v-95bdd494"
+>>>>>>> origin/Drew
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
   module.hot.accept()
+<<<<<<< HEAD
+=======
+  module.hot.dispose(__vueify_style_dispose__)
+>>>>>>> origin/Drew
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-95bdd494", __vue__options__)
   } else {
@@ -2517,7 +2549,7 @@ module.exports = {
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('nav',{staticClass:"tabs"},[_c('ul',[_c('li',{class:{ active: (_vm.currentTab == 'gmd') }},[_c('a',{attrs:{"href":"#","data-value":"gmd"},on:{"click":_vm.changeTab}},[_vm._v("Growth, Maturity, and Decline")])]),_vm._v(" "),_c('li',{class:{ active: (_vm.currentTab == 'diversityinclusion') }},[_c('a',{attrs:{"href":"#","data-value":"diversityinclusion"},on:{"click":_vm.changeTab}},[_vm._v("Diversity and Inclusion")])]),_vm._v(" "),_c('li',{class:{ active: (_vm.currentTab == 'risk') }},[_c('a',{attrs:{"href":"#","data-value":"risk"},on:{"click":_vm.changeTab}},[_vm._v("Risk")])]),_vm._v(" "),_c('li',{class:{ active: (_vm.currentTab == 'value') }},[_c('a',{attrs:{"href":"#","data-value":"value"},on:{"click":_vm.changeTab}},[_vm._v("Value")])]),_vm._v(" "),_c('li',{class:{ active: (_vm.currentTab == 'activity') }},[_c('a',{attrs:{"href":"#","data-value":"activity"},on:{"click":_vm.changeTab}},[_vm._v("Activity")])]),_vm._v(" "),_c('li',{class:{ active: (_vm.currentTab == 'experimental') }},[_c('a',{attrs:{"href":"#","data-value":"experimental"},on:{"click":_vm.changeTab}},[_vm._v("Experimental")])]),_vm._v(" "),_c('li',{class:{ active: (_vm.currentTab == 'git'), hidden: !_vm.gitRepo }},[_c('a',{attrs:{"href":"#","data-value":"git"},on:{"click":_vm.changeTab}},[_vm._v("Git")])]),_vm._v(" "),_c('li',{class:{ active: (_vm.currentTab == 'overview'), hidden: !_vm.gitRepo }},[_c('a',{attrs:{"href":"#","data-value":"overview"},on:{"click":_vm.changeTab}},[_vm._v("Overview")])])])])}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('nav',{staticClass:"tabs"},[_c('ul',[_c('li',{class:{ active: (_vm.currentTab == 'intro') }},[_c('a',{attrs:{"href":"#","data-value":"intro"},on:{"click":_vm.changeTab}},[_vm._v("Introduction")])]),_vm._v(" "),_c('li',{class:{ active: (_vm.currentTab == 'gmd') }},[_c('a',{attrs:{"href":"#","data-value":"gmd"},on:{"click":_vm.changeTab}},[_vm._v("Growth, Maturity, and Decline")])]),_vm._v(" "),_c('li',{class:{ active: (_vm.currentTab == 'diversityinclusion') }},[_c('a',{attrs:{"href":"#","data-value":"diversityinclusion"},on:{"click":_vm.changeTab}},[_vm._v("Diversity and Inclusion")])]),_vm._v(" "),_c('li',{class:{ active: (_vm.currentTab == 'risk') }},[_c('a',{attrs:{"href":"#","data-value":"risk"},on:{"click":_vm.changeTab}},[_vm._v("Risk")])]),_vm._v(" "),_c('li',{class:{ active: (_vm.currentTab == 'value') }},[_c('a',{attrs:{"href":"#","data-value":"value"},on:{"click":_vm.changeTab}},[_vm._v("Value")])]),_vm._v(" "),_c('li',{class:{ active: (_vm.currentTab == 'activity') }},[_c('a',{attrs:{"href":"#","data-value":"activity"},on:{"click":_vm.changeTab}},[_vm._v("Activity")])]),_vm._v(" "),_c('li',{class:{ active: (_vm.currentTab == 'experimental') }},[_c('a',{attrs:{"href":"#","data-value":"experimental"},on:{"click":_vm.changeTab}},[_vm._v("Experimental")])]),_vm._v(" "),_c('li',{class:{ active: (_vm.currentTab == 'git'), hidden: !_vm.gitRepo }},[_c('a',{attrs:{"href":"#","data-value":"git"},on:{"click":_vm.changeTab}},[_vm._v("Git")])]),_vm._v(" "),_c('li',{class:{ active: (_vm.currentTab == 'overview'), hidden: !_vm.gitRepo }},[_c('a',{attrs:{"href":"#","data-value":"overview"},on:{"click":_vm.changeTab}},[_vm._v("Overview")])])])])}
 __vue__options__.staticRenderFns = []
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
@@ -8739,6 +8771,10 @@ var _TableView = require('../components/TableView.vue');
 
 var _TableView2 = _interopRequireDefault(_TableView);
 
+var _IntroductionPage = require('../components/IntroductionPage.vue');
+
+var _IntroductionPage2 = _interopRequireDefault(_IntroductionPage);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var routes = [{ path: '/', component: _AugurCards2.default,
@@ -8754,6 +8790,15 @@ var routes = [{ path: '/', component: _AugurCards2.default,
   component: _MetricsStatusCard2.default
 }, { path: '/single/:owner?/:repo', name: 'single', props: true, canReuse: false, component: _AugurCards2.default,
   children: [{
+    path: "intro",
+    name: "intro",
+    components: {
+      header: _AugurHeader2.default,
+      tabs: _Tabs2.default,
+      controls: _MainControls2.default,
+      content: _IntroductionPage2.default
+    }
+  }, {
     path: "gmd",
     name: "gmd",
     components: {

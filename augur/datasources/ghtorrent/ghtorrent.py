@@ -133,6 +133,34 @@ class GHTorrent(object):
             userid = row[0]
         return userid
 
+<<<<<<< HEAD
+=======
+    @annotate(tag='getLanguage')
+    def getLanguage(self, owner, repo):
+        """
+        Returns the languages used given a project id
+
+        :param project_id: GitHub project id to be matched against languages table
+        :return: The languages from the users table in GHTorrent
+        """
+        repoid=self.repoid(owner,repo)
+        reposql = s.sql.text('SELECT project_languages.language FROM project_languages WHERE project_languages.project_id = :repoid')
+        return pd.read_sql(reposql, self.db, params={"repoid": str(repoid)})
+
+    @annotate(tag='getDescription')
+    def getDescription(self, owner, repo):
+        """
+        Returns the languages used given a project id
+
+        :param project_id: GitHub project id to be matched against languages table
+        :return: The languages from the users table in GHTorrent
+        """
+        repoid=self.repoid(owner,repo)
+        reposql = s.sql.text('SELECT projects.description FROM projects WHERE projects.id = :repoid')
+        return pd.read_sql(reposql, self.db, params={"repoid": str(repoid)})
+
+
+>>>>>>> origin/Drew
     #####################################
     ###    DIVERSITY AND INCLUSION    ###
     #####################################

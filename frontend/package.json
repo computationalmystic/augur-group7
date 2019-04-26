@@ -22,6 +22,10 @@
     "vue-brunch": "^2.0.1"
   },
   "dependencies": {
+<<<<<<< HEAD
+=======
+    "axios": "^0.18.0",
+>>>>>>> origin/Drew
     "babel": "^6.23.0",
     "babel-polyfill": "^6.26.0",
     "babel-runtime": "^6.26.0",

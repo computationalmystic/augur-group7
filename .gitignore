@@ -80,4 +80,7 @@ augur/plugins/
 !sample.config.json
 !vagrant.config.json
 frontend/public/*.map
+<<<<<<< HEAD
 augur.config.json
+=======
+>>>>>>> origin/Drew
