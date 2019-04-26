@@ -19,12 +19,13 @@
             <button class="submit" type="submit">Submit</button>
           </div>
         </form>
-
       </div>
       <div id="issues">
       <h4>Issues For Newcomers</h4>
       </div>
-  </div>
+      <div>
+      <h4>Community Metrics:</h4>
+      </div>
   <div class="row">
     <div class="col col-6">
       <dynamic-line-chart source="communityEngagement:issues_open"
