@@ -29,7 +29,7 @@
       <dynamic-line-chart source="getLanguage"
         title="Languages"
         cite-url=""
-        cite-text="Open Issues"
+        cite-text=""
         disable-rolling-average=1>
       </dynamic-line-chart>
     </div>
