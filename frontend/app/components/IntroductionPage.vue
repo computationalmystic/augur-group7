@@ -35,7 +35,10 @@
     </div>
   </div>
   <div class="row">
-    <language-list-chart></language-list-chart>
+    <language-list-chart source="getLanguage"
+      title="LanguageTest"
+      cite-url=""
+      cite-text=""></language-list-chart>
   </div>
   <div class="row">
     <div class="col col-6">

@@ -1,10 +1,12 @@
 <template>
   <div ref="holder" style="position: relative; z-index: 5">
-    <div class="chart">
+<!--     <div class="chart">
       <h3 style="text-align: center">{{ title }}</h3>
       <vega-lite :spec="spec" :data="values"></vega-lite>
       <p> {{ chart }} </p>
     </div>
+ -->  
+    <h3>Language Test</h3>
   </div>
 </template>
 
@@ -14,7 +16,7 @@ import { mapState } from 'vuex'
 import AugurStats from 'AugurStats'
 
  export default {
-  props: ['source', 'citeUrl', 'citeText', 'title', 'disableRollingAverage', 'alwaysByDate', 'data'],
+  props: ['source', 'citeUrl', 'citeText', 'title'],
   data() {
     return {
       values: [],
