@@ -226,14 +226,11 @@ export default class AugurAPI {
     }
 
     if (repo.owner && repo.name) {
-<<<<<<< HEAD
-=======
 
       //Introduction
       toString(repo, 'getLanguage', 'get_Language')
       toString(repo, 'getDescription', 'get_Description')
 
->>>>>>> origin/Drew
       // DIVERSITY AND INCLUSION
 
       // GROWTH, MATURITY, AND DECLINE

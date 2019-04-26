@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <template>
 
 <div class="is-table-container">
@@ -191,4 +190,3 @@ module.exports = {
   }
 
 </style>
->>>>>>> origin/Drew
