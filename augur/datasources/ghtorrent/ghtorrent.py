@@ -157,6 +157,17 @@ class GHTorrent(object):
         reposql = s.sql.text('SELECT projects.description FROM projects WHERE projects.id = :repoid')
         return pd.read_sql(reposql, self.db, params={"repoid": str(repoid)})
 
+    @annotate(tag='getIssues')
+    def getIssues(self, owner, repo):
+        """
+        Returns the languages used given a project id
+
+        :param project_id: GitHub project id to be matched against languages table
+        :return: The languages from the users table in GHTorrent
+        """
+        repoid=self.repoid(owner,repo)
+        reposql = s.sql.text('SELECT projects.url FROM projects WHERE projects.id = :repoid' + "/issues/" + 'SELECT issues.issue_id FROM issues WHERE issues.id = :repoid')
+        return pd.read_sql(reposql, self.db, params={"repoid": str(repoid)})
 
     #####################################
     ###    DIVERSITY AND INCLUSION    ###
