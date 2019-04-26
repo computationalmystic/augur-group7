@@ -2,33 +2,37 @@
 <section>
   <div id="row">
     <h3>Introduction Page</h3>
-      <div class="col col-6 input">
+      
+      <div class="input">
         <h4>Description</h4>
-        <textarea rows="4" cols="50">
-
+        <textarea rows="5">
         </textarea> 
-
-        <form>
-          <div id="submit_button">
-            <button class="submit" type="submit">Submit</button>
-          </div>
-        </form>
       </div>
-      <div class="col col-6 input">    
+      <div class="input">
         <h4>Languages</h4>  
-        <textarea rows="4" cols="50">
-
+        <textarea rows="5">
         </textarea> 
-
+      </div>
         <form>
           <div id="submit_button">
             <button class="submit" type="submit">Submit</button>
           </div>
         </form>
+
       </div>
       <div id="issues">
       <h4>Issues For Newcomers</h4>
       </div>
+  </div>
+  <div class="row">
+    <div class="col col-6">
+      <dynamic-line-chart source="getLanguage"
+        title="Languages"
+        cite-url=""
+        cite-text=""
+        disable-rolling-average=1>
+      </dynamic-line-chart>
+    </div>
   </div>
   <div class="row">
     <div class="col col-6">
@@ -79,6 +83,9 @@ module.exports = {
 
   .input {
    display: inline-block;
+   width: 49%;
+   padding-bottom: 50px;
+   padding-top: 50px;
   }
 
 </style>
