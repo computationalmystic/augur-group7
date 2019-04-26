@@ -171,7 +171,7 @@ class GHTorrent(object):
         repoJSON = pd.read_sql(reposql, self.db, params={"repoid": str(repoid)})
         repoJSON2 = pd.read_sql(reposql2, self.db, params={"repoid": str(repoid)})
         repoJSON3 = [repoJSON, repoJSON2]
-        return repoJSON2
+        return pd.concat(repoJSON3)
 
     #####################################
     ###    DIVERSITY AND INCLUSION    ###
