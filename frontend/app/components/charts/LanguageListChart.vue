@@ -13,7 +13,7 @@
 import { mapState } from 'vuex'
 import AugurStats from 'AugurStats'
 
-export default {
+ export default {
   props: ['source', 'citeUrl', 'citeText', 'title', 'disableRollingAverage', 'alwaysByDate', 'data'],
   data() {
     return {
@@ -59,5 +59,5 @@ export default {
     //define any methods you may need here
     //you can call them anywhere with: this.methodName()
   }
-}
+} 
 </script>

@@ -35,14 +35,7 @@
     </div>
   </div>
   <div class="row">
-    <div class="col col-6">
-      <language-list-chart source="getLanguage"
-        title="Languages Test"
-        cite-url=""
-        cite-text=""
-        disable-rolling-average=1>
-      </language-list-chart>
-    </div>
+    <language-list-chart></language-list-chart>
   </div>
   <div class="row">
     <div class="col col-6">
