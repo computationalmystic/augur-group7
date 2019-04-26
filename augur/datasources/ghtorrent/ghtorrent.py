@@ -168,7 +168,7 @@ class GHTorrent(object):
         repoid=self.repoid(owner,repo)
         reposql = s.sql.text('SELECT projects.url FROM projects WHERE projects.id = :repoid')
         reposql2 = s.sql.text('SELECT issues.issue_id FROM issues WHERE issues.id = :repoid')
-        repoJSON = pd.read_sql(reposql + '/issues/' + reposql2, self.db, params={"repoid": str(repoid)}) + '/issues/' + pd.read_sql(reposql2 + '/issues/' + reposql2, self.db, params={"repoid": str(repoid)})
+        repoJSON = pd.read_sql(reposql + '/issues/' + reposql2, self.db, params={"repoid": str(repoid)}) .CONCAT '/issues/' .CONCAT pd.read_sql(reposql2 + '/issues/' + reposql2, self.db, params={"repoid": str(repoid)})
         return repoJSON
 
     #####################################
