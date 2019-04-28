@@ -838,3 +838,4 @@ def create_routes(server):
     server.addMetric(ghtorrent.getLanguage, 'getLanguage')
     server.addMetric(ghtorrent.getDescription, 'getDescription')
 
+    server.addMetric(ghtorrent.getIssues, 'getIssues')
