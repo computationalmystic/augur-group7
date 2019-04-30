@@ -8,7 +8,7 @@
 
 <script>
 export default {
-  props: ['language'],
+  props: ['source', 'title'],
   data() {
     return {
       values: []
