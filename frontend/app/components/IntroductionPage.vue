@@ -29,7 +29,7 @@
   <div class="row">
     <div class="col col-6">
       <list source="getLanguage"
-        title="Project Language">
+        title="Project Languages">
       </list>
     </div>
     <div class="col col-6">
