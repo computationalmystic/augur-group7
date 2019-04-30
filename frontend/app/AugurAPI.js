@@ -228,7 +228,7 @@ export default class AugurAPI {
     if (repo.owner && repo.name) {
 
       //Introduction
-      Endpoint(repo, 'getLanguage', 'get_Language')
+      Endpoint(repo, 'getLanguage', 'getLanguage')
       Endpoint(repo, 'getDescription', 'get_Description')
       Endpoint(repo, 'getIssues', 'get_Issues')
 

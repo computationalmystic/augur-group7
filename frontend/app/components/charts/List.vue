@@ -1,9 +1,11 @@
-<ul>
-  <template v-for="item in items">
-    <li>{{ item.msg }}</li>
-    <li class="divider" role="presentation"></li>
-  </template>
-</ul>
+<template>
+  <div>
+    <ul>
+      <li v-for="item in values">{{ item.msg }}</li>
+      <li class="divider" role="presentation"></li>
+    </ul>
+  </div>
+</template>
 
 
 <script>
@@ -31,6 +33,19 @@ export default {
         })
       }
     }
+  },
+  created(){
+
+    let repo = window.AugurAPI.Repo({ githubURL: this.repo })
+    repo.getLanguage().then((data) =>{
+      this.values = data
+      console.log('Data starts here:')
+      console.log(data)
+
+    })
+
+  },
+  methods: {
   }
 }
 
