@@ -171,7 +171,8 @@ class GHTorrent(object):
         repoJSON = pd.read_sql(reposql, self.db, params={"repoid": str(repoid)})
         repoJSON2 = pd.read_sql(reposql2, self.db, params={"repoid": str(repoid)})
         repoJSON3 = [repoJSON, repoJSON2]
-        return newDf = pd.Dataframe({"issue_id": repoJSON2['issue_id'], "name": repoJSON})
+        newDf = pd.Dataframe({"issue_id": repoJSON2['issue_id'], "name": repoJSON})
+        return
 
     #####################################
     ###    DIVERSITY AND INCLUSION    ###
