@@ -37,3 +37,6 @@ git clone https://github.com/computationalmystic/augur-group7.git
 * Make sure edit your code in augur.config.json ```vim augur.config.json```
 * Start the frontend and backend server: ```make dev```
 * In your url, go to ```http://localhost:3333```, then you are able to look at our project.
+
+## EC2 Instance:
+* Connect to your EC2 instance: ``` ssh -i /...path.../..your.pem ec2-user@public_dns_name
