@@ -30,6 +30,8 @@
     <div class="col col-6">
       <list source="getLanguages"
         title="Project Languages"
+        cite-url=""
+        cite-text="">
       </list>
     </div>
     <div class="col col-6">
