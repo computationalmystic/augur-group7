@@ -1,7 +1,7 @@
 <template>
   <div>
     <ul>
-      <li v-for="item in values">{{ item.msg }}</li>
+      <li v-for="item in values">{{ item.language }}</li>
       <li class="divider" role="presentation"></li>
     </ul>
   </div>
