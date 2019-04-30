@@ -28,10 +28,8 @@
       </div>
   <div class="row">
     <div class="col col-6">
-      <list source="getLanguages"
-        title="Project Languages"
-        cite-url=""
-        cite-text="">
+      <list source="getLanguage"
+        title="Project Language">
       </list>
     </div>
     <div class="col col-6">
