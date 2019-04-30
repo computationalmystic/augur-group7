@@ -62,6 +62,7 @@
 <script>
 
 import DynamicLineChart from './charts/DynamicLineChart'
+import List from './charts/DynamicLineChart'
 
 module.exports = {
   data() {
@@ -70,7 +71,8 @@ module.exports = {
     }
   },
   components: {
-    DynamicLineChart
+    DynamicLineChart,
+    List
   }
 };
 
