@@ -62,7 +62,7 @@
 <script>
 
 import DynamicLineChart from './charts/DynamicLineChart'
-import List from './charts/DynamicLineChart'
+import List from './charts/List'
 
 module.exports = {
   data() {
