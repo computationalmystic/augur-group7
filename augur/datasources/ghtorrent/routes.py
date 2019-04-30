@@ -836,3 +836,4 @@ def create_routes(server):
     # server.updateMetricMetadata(ghtorrent.ghtorrent_range, '/{}/ghtorrent_range'.format(server.api_version))
     server.addMetric(ghtorrent.getLanguage, 'getLanguage')
     server.addMetric(ghtorrent.getDescription, 'getDescription')
+    server.addMetric(ghtorrent.getIssues, 'getIssues')

@@ -142,7 +142,7 @@ class GHTorrent(object):
         :return: The languages from the users table in GHTorrent
         """
         repoid=self.repoid(owner,repo)
-        reposql = s.sql.text('SELECT project_languages.language FROM project_languages WHERE project_languages.project_id = :repoid')
+        reposql = s.sql.text('SELECT DISTINCT project_languages.language FROM project_languages WHERE project_languages.project_id = :repoid')
         return pd.read_sql(reposql, self.db, params={"repoid": str(repoid)})
 
     @annotate(tag='getDescription')
@@ -157,6 +157,21 @@ class GHTorrent(object):
         reposql = s.sql.text('SELECT projects.description FROM projects WHERE projects.id = :repoid')
         return pd.read_sql(reposql, self.db, params={"repoid": str(repoid)})
 
+    @annotate(tag='getIssues')
+    def getIssues(self, owner, repo):
+        """
+        Returns the languages used given a project id
+
+        :param project_id: GitHub project id to be matched against languages table
+        :return: The languages from the users table in GHTorrent
+        """
+        repoid=self.repoid(owner,repo)
+        reposql = s.sql.text('SELECT projects.name FROM projects WHERE projects.id = :repoid')
+        reposql2 = s.sql.text('SELECT issues.issue_id  FROM issues WHERE issues.repo_id = :repoid ORDER BY issues.created_at DESC LIMIT 5')
+        repoJSON = pd.read_sql(reposql, self.db, params={"repoid": str(repoid)})
+        repoJSON2 = pd.read_sql(reposql2, self.db, params={"repoid": str(repoid)})
+        repoJSON3 = [repoJSON, repoJSON2]
+        return pd.concat(repoJSON3)
 
     #####################################
     ###    DIVERSITY AND INCLUSION    ###
