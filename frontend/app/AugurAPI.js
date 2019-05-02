@@ -230,7 +230,7 @@ export default class AugurAPI {
       //Introduction
       Endpoint(repo, 'getLanguage', 'getLanguage')
       Endpoint(repo, 'getDescription', 'getDescription')
-      Endpoint(repo, 'getIssues', 'get_Issues')
+      Endpoint(repo, 'getIssues', 'getIssues')
 
       // DIVERSITY AND INCLUSION
 
