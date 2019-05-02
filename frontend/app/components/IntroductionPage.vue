@@ -102,7 +102,7 @@ module.exports = {
   .a {
     float: left;
     margin: 20px;
-    padding-bottom: 100%
+    padding-bottom: 100%;
     margin-bottom: -100;
     font-size: 1.2em;
   }
