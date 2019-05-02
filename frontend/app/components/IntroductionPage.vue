@@ -4,16 +4,16 @@
     <div>
     <h2 style="display: inline-block; color: black !important">{{ $store.state.gitRepo }}</h2>
     </div>
-    <h4>Description</h4>
       <div class="input a">
       <description-list source="getDescription"
         title="Project Description">
+      <h4>Description</h4>
       </description-list>
     </div>
-    <h4>Languages</h4>
       <div class="input a">
       <language-list source="getLanguage"
         title="Project Languages">
+      <h4>Languages</h4>
       </language-list>
     </div>
   </div>
