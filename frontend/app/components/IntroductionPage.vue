@@ -32,6 +32,12 @@
         title="Project Languages">
       </list>
     </div>
+      <div class="row">
+    <div class="col col-6">
+      <list source="getDescription"
+        title="Project Description">
+      </list>
+    </div>
     <div class="col col-6">
       <dynamic-line-chart source="communityEngagement:issues_open"
         title="Community Engagement: Open Issues"
