@@ -16,7 +16,7 @@
         <h4>Languages</h4>
         <div class="results">
           <language-list source="getLanguage"
-            title="Project Languages">>
+            title="Project Languages">
           </language-list>
         </div>
     </div>
@@ -40,7 +40,7 @@
       <h4>Issues For Newcomers</h4>
       <div class="results">
         <issue-list source="getIssues"
-          title="Project Issues"
+          title="Project Issues">
         </issue-list>
       </div>
     </div>
