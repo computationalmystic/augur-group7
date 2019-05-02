@@ -36,9 +36,14 @@
           </div>
         </form>
   </div> 
-      <div id="issues">
+    <div id="issues">
       <h4>Issues For Newcomers</h4>
+      <div class="results">
+        <issue-list source="getIssues"
+          title="Project Issues"
+        </issue-list>
       </div>
+    </div>
       <div>
       <h4>Community Metrics:</h4>
       </div>
@@ -75,6 +80,7 @@
 import DynamicLineChart from './charts/DynamicLineChart'
 import LanguageList from './charts/LanguageList'
 import DescriptionList from './charts/DescriptionList'
+import IssueList from './charts/IssueList'
 
 module.exports = {
   data() {
@@ -85,7 +91,8 @@ module.exports = {
   components: {
     DynamicLineChart,
     LanguageList,
-    DescriptionList
+    DescriptionList,
+    IssueList
   }
 };
 
