@@ -170,7 +170,7 @@ class GHTorrent(object):
         reposql2 = s.sql.text('SELECT issues.issue_id  FROM issues WHERE issues.repo_id = :repoid ORDER BY issues.created_at DESC LIMIT 5')
         repoJSON = pd.read_sql(reposql, self.db, params={"repoid": str(repoid)})
         repoJSON2 = pd.read_sql(reposql2, self.db, params={"repoid": str(repoid)})
-        newDf = pd.DataFrame({"issue_id": repoJSON2['issue_id'], "name": repoJSON})
+        newDf = pd.DataFrame({"issue_id": repoJSON2['issue_id'], "name": repoJSON['name']})
         return newDf
 
     #####################################
