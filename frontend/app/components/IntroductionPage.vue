@@ -5,17 +5,17 @@
     <h2 style="display: inline-block; color: black !important">{{ $store.state.gitRepo }}</h2>
     </div>
     <h4>Description</h4>
-    <div class="col col-6">
-      <language-list source="getLanguage"
-        title="Project Languages">
-      </language-list>
-    </div>
-    <h4>Languages</h4>  
-    <div class="col col-6">
+      <div class="input">
       <description-list source="getDescription"
         title="Project Description">
       </description-list>
     </div>
+    <h4>Languages</h4>
+      <div class="input a">
+      <language-list source="getLanguage"
+        title="Project Languages">
+      </language-list>
+    </div>  
       <div class="input">
         <textarea rows="5">
         </textarea> 
@@ -92,6 +92,10 @@ module.exports = {
    width: 49%;
    padding-bottom: 50px;
    padding-top: 50px;
+  }
+  ul.a {
+    list-style-type: circle;
+    font-size: 1.2em;
   }
 
 </style>
