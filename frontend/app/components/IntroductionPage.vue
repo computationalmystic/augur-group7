@@ -32,7 +32,6 @@
         title="Project Languages">
       </list>
     </div>
-      <div class="row">
     <div class="col col-6">
       <list source="getDescription"
         title="Project Description">

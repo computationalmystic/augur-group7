@@ -35,15 +35,23 @@ export default {
     }
   },
   created(){
+    if (this.source == 'getlanguage') {
+      let repo = window.AugurAPI.Repo({ githubURL: this.repo })
+      repo.getlanguage().then((data) =>{
+        this.values = data
+        console.log('Data starts here:')
+        console.log(data)
+      })
+    }
 
-    let repo = window.AugurAPI.Repo({ githubURL: this.repo })
-    repo.source().then((data) =>{
-      this.values = data
-      console.log('Data starts here:')
-      console.log(data)
-
-    })
-
+    if (this.source == 'getDescription') {
+      let repo = window.AugurAPI.Repo({ githubURL: this.repo })
+      repo.getDescription().then((data) =>{
+        this.values = data
+        console.log('Data starts here:')
+        console.log(data)s
+      })
+    }
   },
   methods: {
   }
