@@ -19,6 +19,8 @@ export default {
   computed: {
 
     url(item) {
+      console.log('Item is here:')
+      console.log(item)
       var url = "https://www.github.com/twitter/" + item.name[0] + "/issues/" + item.issue_id
       return url
     },
