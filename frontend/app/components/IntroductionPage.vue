@@ -28,14 +28,14 @@
       </div>
   <div class="row">
     <div class="col col-6">
-      <list source="getLanguage"
+      <language-list source="getLanguage"
         title="Project Languages">
-      </list>
+      </language-list>
     </div>
     <div class="col col-6">
-      <list source="getDescription"
+      <description-list source="getDescription"
         title="Project Description">
-      </list>
+      </description-list>
     </div>
     <div class="col col-6">
       <dynamic-line-chart source="communityEngagement:issues_open"
@@ -67,7 +67,8 @@
 <script>
 
 import DynamicLineChart from './charts/DynamicLineChart'
-import List from './charts/List'
+import LanguageList from './charts/LanguageList'
+import DescriptionList from './charts/DescriptionList'
 
 module.exports = {
   data() {
@@ -77,7 +78,8 @@ module.exports = {
   },
   components: {
     DynamicLineChart,
-    List
+    LanguageList,
+    DescriptionList
   }
 };
 
