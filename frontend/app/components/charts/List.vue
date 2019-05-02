@@ -14,12 +14,7 @@ export default {
   data() {
     return {
       values: [],
-      metricSource: "testing"
     }
-  },
-  created() {
-    //this.metricSource = this.source
-    this.metricSource = "Testing"
   },
   computed: {
     repo() {
