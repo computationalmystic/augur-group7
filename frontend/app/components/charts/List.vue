@@ -49,7 +49,7 @@ export default {
       repo.getDescription().then((data) =>{
         this.values = data
         console.log('Data starts here:')
-        console.log(data)s
+        console.log(data)
       })
     }
   },
