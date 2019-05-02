@@ -4960,7 +4960,7 @@ exports.default = {
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('ul',[_vm._l((_vm.values),function(item){return _c('li',[_vm._v(" \"https://www.github.com/twitter/\" + item.name + \"/issues/\" + item.issue_id }}\n    ")])}),_vm._v(" "),_c('li',{staticClass:"divider",attrs:{"role":"presentation"}})],2)])}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('ul',[_vm._l((_vm.values),function(item){return _c('li',[_vm._v(" \"https://www.github.com/twitter/\" + item.name + \"/issues/\" + item.issue_id }}")])}),_vm._v(" "),_c('li',{staticClass:"divider",attrs:{"role":"presentation"}})],2)])}
 __vue__options__.staticRenderFns = []
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
