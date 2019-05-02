@@ -2,7 +2,7 @@
   <div>
     <ul>
       <li v-for="item in values">
-        <a v-bind:href="'https://www.github.com/twitter/' + item.name + '/issues/' + item.issue_id "</a>
+        <a v-bind:href="{{'https://www.github.com/twitter/' + item.name + '/issues/' + item.issue_id }}"</a>
       </li>
       <li class="divider" role="presentation"></li>
     </ul>
