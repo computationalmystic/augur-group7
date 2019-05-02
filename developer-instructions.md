@@ -39,9 +39,28 @@ git clone https://github.com/computationalmystic/augur-group7.git
 * In your url, go to ```http://localhost:3333```
 
 ## EC2 Instance Setup:
-* Connect to your EC2 instance: ``` ssh -i /...path.../..your.pem ec2-user@public_dns_name ```
-* Then, go to ``` http://augur.augurlabs.io/static/docs/dev-guide/2-install.html ```
-  and follow 2.1.1.1. Ubuntu Dependency Installation Instructions and 2.3 Augur Installation Instructions.
+* Before you start, the version of Ubuntu that we used should be 16.04
+* Connect to your EC2 instance: 
+```chmod 400 <pemkey.pem>```
+* ``` ssh -i <pemkey.pem> ec2-user@amazonhostname.com ```
+* check python version by ```python --version```
+* if not Install it by ```sudo apt-get install python3```
+* ```sudo apt-get install python3-pip```
+* Installing virtual environment ```sudo apt install virtualenv```
+* ```virtualenv augur```
+* ```virtualenv -p /usr/bin/python3 augur```
+* Activate virtual env: ```source augur/bin/activate```
+* Install NodeSource by: ```curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -```
+* Install NodeJS by : ```sudo apt-get install -y nodejs```
+* Install MariaDB by : ```sudo apt-get install -y mariadb-server```
+* Clone our repository by: ```git clone https://github.com/computationalmystic/augur-group7.git```
+* ```cd augur-group7```
+* ```make install-dev```
+
+
+* run the augur ```augur```
+
+
 * Edit augur.config.json ```vim augur.config.json```
 * Start the frontend and backend server: ```make dev```
 * In your url, go to ```http://localhost:3333```
