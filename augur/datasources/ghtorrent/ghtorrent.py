@@ -172,7 +172,8 @@ class GHTorrent(object):
         repoJSON2 = pd.read_sql(reposql2, self.db, params={"repoid": str(repoid)})
         repoName = repoJSON['name']
        # newDf = pd.DataFrame({"issue_id": repoJSON2['issue_id'], "name": repoJSON['name']})
-        newDf = pd.DataFrame({"issue_id": repoJSON2['issue_id'], "name": repoName})
+        newDf = pd.DataFrame({"issue_id": repoJSON2['issue_id']})
+        newDF.assign(name = repoName)
         return newDf
 
     #####################################
