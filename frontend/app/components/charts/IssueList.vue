@@ -18,7 +18,8 @@ export default {
   },
   computed: {
     url(item) {
-      return "https://www.github.com/twitter/" + item.name + "/issues/" + item.issue_id
+      var url = "https://www.github.com/twitter/" + item.name + "/issues/" + item.issue_id
+      return url
     },
     repo() {
       return this.$store.state.baseRepo
