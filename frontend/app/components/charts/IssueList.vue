@@ -2,7 +2,7 @@
   <div>
     <ul>
       <li v-for="item in values">
-        <a :href="javascript:url(item);">{{"https://www.github.com/twitter/" + item.name + "/issues/" + item.issue_id }}</a>
+        <a :href="'url(item)'">{{"https://www.github.com/twitter/" + item.name + "/issues/" + item.issue_id }}</a>
       </li>
       <li class="divider" role="presentation"></li>
     </ul>
