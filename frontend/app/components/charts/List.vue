@@ -37,7 +37,7 @@ export default {
   created(){
 
     let repo = window.AugurAPI.Repo({ githubURL: this.repo })
-    repo.source().then((data) =>{
+    repo.getLanguage().then((data) =>{
       this.values = data
       console.log('Data starts here:')
       console.log(data)
