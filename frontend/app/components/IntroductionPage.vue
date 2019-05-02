@@ -14,7 +14,7 @@
     </div>
       <div class="a">
         <h4>Languages</h4>
-        <div class"results">
+        <div class="results">
           <language-list source="getLanguage"
             title="Project Languages">>
           </language-list>
@@ -100,10 +100,9 @@ module.exports = {
    padding-top: 50px;
   }
   .a {
-    float: left;
-    margin: 20px;
-    padding-bottom: 100%;
-    margin-bottom: -100;
+    display: inline-block;
+    vertical-align: top;
+    width: 49%;
     font-size: 1.2em;
   }
   .results {
