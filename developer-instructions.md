@@ -42,4 +42,6 @@ git clone https://github.com/computationalmystic/augur-group7.git
 * Connect to your EC2 instance: ``` ssh -i /...path.../..your.pem ec2-user@public_dns_name ```
 * Then, go to ``` http://augur.augurlabs.io/static/docs/dev-guide/2-install.html ```
   and follow 2.1.1.1. Ubuntu Dependency Installation Instructions and 2.3 Augur Installation Instructions.
-* Edit augur.config.json file.
+* Edit augur.config.json ```vim augur.config.json```
+* Start the frontend and backend server: ```make dev```
+* In your url, go to ```http://localhost:3333```
