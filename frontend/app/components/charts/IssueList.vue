@@ -19,9 +19,6 @@ export default {
     }
   },
   computed: {
-    url(item) {
-      return "https://www.github.com/twitter/" + item.name + "/issues/" + item.issue_id 
-    },
     repo() {
       return this.$store.state.baseRepo
     },
@@ -49,6 +46,9 @@ export default {
   })
   },
   methods: {
+  url(item) {
+      return "https://www.github.com/twitter/" + item.name + "/issues/" + item.issue_id 
+    }
   }
 }
 
