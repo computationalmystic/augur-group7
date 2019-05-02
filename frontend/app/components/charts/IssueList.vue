@@ -1,7 +1,7 @@
 <template>
   <div>
     <ul>
-      <li v-for="item in values">{{ "https://www.github.com/twitter/"+ item.name + "/issues/" + item.issue_id" }}</li>
+      <li v-for="item in values">{{ "https://wwww.github.com/twitter/" + item.name + "/issues/" item.issue_id }}</li>
       <li class="divider" role="presentation"></li>
     </ul>
   </div>
@@ -13,7 +13,7 @@ export default {
   props: ['source', 'title'],
   data() {
     return {
-      values: []
+      values:
     }
   },
   computed: {
@@ -36,7 +36,7 @@ export default {
   },
   created(){
     let repo = window.AugurAPI.Repo({ githubURL: this.repo })
-    repo.getDescription().then((data) =>{
+    repo.getIssues().then((data) =>{
     this.values = data
     console.log('Data starts here:')
     console.log(data)

@@ -40,7 +40,7 @@
       <h4>Issues For Newcomers</h4>
       <div class="results">
         <issue-list source="getIssues"
-          title="Project Issues">
+          title="Project Issues">s
         </issue-list>
       </div>
     </div>
