@@ -1,20 +1,24 @@
 <template>
 <section>
-  <div id="row">
+  <div class="container">
     <div>
     <h2 style="display: inline-block; color: black !important">{{ $store.state.gitRepo }}</h2>
     </div>
       <div class="a">
-      <h4>Description</h4>
-      <description-list source="getDescription"
-        title="Project Description">
-      </description-list>
+        <h4>Description</h4>
+        <div class="results">
+          <description-list source="getDescription"
+            title="Project Description">
+          </description-list>
+        </div>
     </div>
       <div class="a">
-      <h4>Languages</h4>
-      <language-list source="getLanguage"
-        title="Project Languages">>
-      </language-list>
+        <h4>Languages</h4>
+        <div class"results">
+          <language-list source="getLanguage"
+            title="Project Languages">>
+          </language-list>
+        </div>
     </div>
   </div>
   <div id="row">  
@@ -96,11 +100,17 @@ module.exports = {
    padding-top: 50px;
   }
   .a {
-    display: inline-block;
-    width: 49%;
+    float: left;
+    margin: 20px;
+    padding-bottom: 100%
+    margin-bottom: -100;
     font-size: 1.2em;
+  }
+  .results {
     background: white;
   }
-
+  .container {
+    overflow: hidden;
+  }
 
 </style>
