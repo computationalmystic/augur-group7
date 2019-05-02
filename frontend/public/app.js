@@ -705,8 +705,9 @@ var AugurAPI = function () {
       if (repo.owner && repo.name) {
 
         //Introduction
-        toString(repo, 'getLanguage', 'get_Language');
-        toString(repo, 'getDescription', 'get_Description');
+        Endpoint(repo, 'getLanguage', 'get_Language');
+        Endpoint(repo, 'getDescription', 'get_Description');
+        Endpoint(repo, 'getIssues', 'get_Issues');
 
         // DIVERSITY AND INCLUSION
 
@@ -1649,9 +1650,9 @@ var _DynamicLineChart = require('./charts/DynamicLineChart');
 
 var _DynamicLineChart2 = _interopRequireDefault(_DynamicLineChart);
 
-var _LanguageListChart = require('./charts/LanguageListChart');
+var _List = require('./charts/List');
 
-var _LanguageListChart2 = _interopRequireDefault(_LanguageListChart);
+var _List2 = _interopRequireDefault(_List);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -1662,15 +1663,15 @@ module.exports = {
 
   components: {
     DynamicLineChart: _DynamicLineChart2.default,
-    LanguageListChart: _LanguageListChart2.default
+    List: _List2.default
   }
 };
 })()
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('section',[_vm._m(0),_vm._v(" "),_vm._m(1),_vm._v(" "),_c('div',{staticClass:"row"},[_c('div',{staticClass:"col col-6"},[_c('dynamic-line-chart',{attrs:{"source":"getLanguage","title":"Languages","cite-url":"","cite-text":"","disable-rolling-average":"1"}})],1)]),_vm._v(" "),_c('div',{staticClass:"row"},[_c('language-list-chart')],1),_vm._v(" "),_c('div',{staticClass:"row"},[_c('div',{staticClass:"col col-6"},[_c('dynamic-line-chart',{attrs:{"source":"communityEngagement:issues_open","title":"Community Engagement: Open Issues","cite-url":"https://github.com/augurlabs/wg-gmd/blob/master/activity-metrics/open-issues.md","cite-text":"Open Issues","disable-rolling-average":"1"}})],1),_vm._v(" "),_c('div',{staticClass:"col col-6"},[_c('dynamic-line-chart',{attrs:{"source":"watchers","title":"Watchers / Week ","cite-url":"https://github.com/augurlabs/wg-gmd/tree/master/activity-metrics/watchers.md","cite-text":"Watchers"}})],1),_vm._v(" "),_c('div',{staticClass:"col col-6"},[_c('dynamic-line-chart',{attrs:{"source":"openIssues","title":"Open Issues / Week","cite-url":"https://github.com/augurlabs/wg-gmd/blob/master/activity-metrics/open-issues.md","cite-text":"Issues Open"}})],1)])])}
-__vue__options__.staticRenderFns = [function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{attrs:{"id":"row"}},[_c('h3',[_vm._v("Introduction Page")]),_vm._v(" "),_c('div',{staticClass:"input"},[_c('h4',[_vm._v("Description")]),_vm._v(" "),_c('textarea',{attrs:{"rows":"5"}})]),_vm._v(" "),_c('div',{staticClass:"input"},[_c('h4',[_vm._v("Languages")]),_vm._v(" "),_c('textarea',{attrs:{"rows":"5"}})]),_vm._v(" "),_c('form',[_c('div',{attrs:{"id":"submit_button"}},[_c('button',{staticClass:"submit",attrs:{"type":"submit"}},[_vm._v("Submit")])])])])},function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{attrs:{"id":"issues"}},[_c('h4',[_vm._v("Issues For Newcomers")])])}]
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('section',[_c('div',{attrs:{"id":"row"}},[_c('div',[_c('h2',{staticStyle:{"display":"inline-block","color":"black !important"}},[_vm._v(_vm._s(_vm.$store.state.gitRepo))])]),_vm._v(" "),_vm._m(0),_vm._v(" "),_vm._m(1),_vm._v(" "),_vm._m(2)]),_vm._v(" "),_vm._m(3),_vm._v(" "),_vm._m(4),_vm._v(" "),_c('div',{staticClass:"row"},[_c('div',{staticClass:"col col-6"},[_c('list',{attrs:{"source":"getLanguage","title":"Project Languages"}})],1),_vm._v(" "),_c('div',{staticClass:"col col-6"},[_c('dynamic-line-chart',{attrs:{"source":"communityEngagement:issues_open","title":"Community Engagement: Open Issues","cite-url":"https://github.com/augurlabs/wg-gmd/blob/master/activity-metrics/open-issues.md","cite-text":"Open Issues","disable-rolling-average":"1"}})],1),_vm._v(" "),_c('div',{staticClass:"col col-6"},[_c('dynamic-line-chart',{attrs:{"source":"watchers","title":"Watchers / Week ","cite-url":"https://github.com/augurlabs/wg-gmd/tree/master/activity-metrics/watchers.md","cite-text":"Watchers"}})],1),_vm._v(" "),_c('div',{staticClass:"col col-6"},[_c('dynamic-line-chart',{attrs:{"source":"openIssues","title":"Open Issues / Week","cite-url":"https://github.com/augurlabs/wg-gmd/blob/master/activity-metrics/open-issues.md","cite-text":"Issues Open"}})],1)])])}
+__vue__options__.staticRenderFns = [function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"input"},[_c('h4',[_vm._v("Description")]),_vm._v(" "),_c('textarea',{attrs:{"rows":"5"}})])},function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"input"},[_c('h4',[_vm._v("Languages")]),_vm._v(" "),_c('textarea',{attrs:{"rows":"5"}})])},function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('form',[_c('div',{attrs:{"id":"submit_button"}},[_c('button',{staticClass:"submit",attrs:{"type":"submit"}},[_vm._v("Submit")])])])},function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{attrs:{"id":"issues"}},[_c('h4',[_vm._v("Issues For Newcomers")])])},function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('h4',[_vm._v("Community Metrics:")])])}]
 __vue__options__._scopeId = "data-v-95bdd494"
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
@@ -5012,6 +5013,49 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
     hotAPI.createRecord("data-v-2b1e04b8", __vue__options__)
   } else {
     hotAPI.reload("data-v-2b1e04b8", __vue__options__)
+  }
+})()}
+});
+
+;require.register("components/charts/List.vue", function(exports, require, module) {
+;(function(){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = {
+  props: ['source', 'title'],
+  data: function data() {
+    return {
+      values: [],
+      metricSource: "testing"
+    };
+  },
+  created: function created() {
+    this.metricSource = "Testing";
+  },
+
+  computed: {
+    repo: function repo() {
+      return this.$store.state.baseRepo;
+    }
+  }
+};
+})()
+if (module.exports.__esModule) module.exports = module.exports.default
+var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
+if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{ref:"holder",staticStyle:{"position":"relative","z-index":"5"}},[_c('h4',[_vm._v("oh my god why isn't this working?!?")]),_vm._v(" "),_c('h4',[_vm._v(_vm._s(_vm.metricSource))]),_vm._v(" "),_c('h4',[_vm._v(_vm._s(_vm.title))]),_vm._v(" "),_c('h4',[_vm._v(_vm._s(_vm.source))])])}
+__vue__options__.staticRenderFns = []
+if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), true)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-1979edfb", __vue__options__)
+  } else {
+    hotAPI.reload("data-v-1979edfb", __vue__options__)
   }
 })()}
 });
