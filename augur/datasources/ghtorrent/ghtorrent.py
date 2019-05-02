@@ -175,7 +175,7 @@ class GHTorrent(object):
         newDF = pd.DataFrame({"issue_id": repoJSON2['issue_id']})
         newDF['name'] = pd.Series([repoName for x in range(len(newDF.index))], index=newDF.index)
        # newDF.assign(name = repoName)
-        return newDf
+        return newDF
 
     #####################################
     ###    DIVERSITY AND INCLUSION    ###
