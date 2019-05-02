@@ -18,13 +18,6 @@ export default {
   },
   computed: {
 
-    url(item) {
-      console.log('Item is here:')
-      console.log(item) //1, etc
-      //replace 'item ' with this.values[item].name[0]s
-      var url = "https://www.github.com/twitter/" + item.name[0] + "/issues/" + item.issue_id
-      return url
-    },
     repo() {
       return this.$store.state.baseRepo
     },
@@ -52,6 +45,13 @@ export default {
   })
   },
   methods: {
+    url(item) {
+      console.log('Item is here:')
+      console.log(item) //1, etc
+      //replace 'item ' with this.values[item].name[0]s
+      var url = "https://www.github.com/twitter/" + item.name[0] + "/issues/" + item.issue_id
+      return url
+    },
   }
 }
 
