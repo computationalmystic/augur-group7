@@ -58,7 +58,7 @@ git clone https://github.com/computationalmystic/augur-group7.git
 * ```make install-dev```
 
 
-* run the augur ```augur```
+* run the augur ```augur``` --update from here
 
 
 * Edit augur.config.json ```vim augur.config.json```
