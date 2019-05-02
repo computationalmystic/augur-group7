@@ -4,13 +4,13 @@
     <div>
     <h2 style="display: inline-block; color: black !important">{{ $store.state.gitRepo }}</h2>
     </div>
-      <div class="input a">
+      <div class="a">
       <h4>Description</h4>
       <description-list source="getDescription"
         title="Project Description">
       </description-list>
     </div>
-      <div class="input a">
+      <div class="a">
       <h4>Languages</h4>
       <language-list source="getLanguage"
         title="Project Languages">>
@@ -96,10 +96,11 @@ module.exports = {
    padding-top: 50px;
   }
   .a {
+    display: inline-block;
+    width: 49%;
     font-size: 1.2em;
+    background: white;
   }
-  ul {
-    list-style-type: circle;
-  }
+
 
 </style>
