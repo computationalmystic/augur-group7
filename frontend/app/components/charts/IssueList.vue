@@ -13,7 +13,7 @@ export default {
   props: ['source', 'title'],
   data() {
     return {
-      values:
+      values: []
     }
   },
   computed: {
