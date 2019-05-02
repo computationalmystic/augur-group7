@@ -1,7 +1,7 @@
 <template>
   <div>
     <ul>
-      <li v-for="item in values">{{ https://wwww.github.com/twitter/ + item.name + /issues/ item.issue_id }}</li>
+      <li v-for="item in values">{{ "https://wwww.github.com/twitter/" + item.name + "/issues/" + item.issue_id }}</li>
       <li class="divider" role="presentation"></li>
     </ul>
   </div>
