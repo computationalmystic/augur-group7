@@ -1,7 +1,7 @@
 <template>
   <div>
     <ul>
-      <li v-for="item in values"><a :href="url(item)">https://www.github.com/twitter/{{ item.name[0] }}/issues/{{ item.issue_id }}</a></li>
+      <li v-for="(item, idx) in values"><a :href="url(idx)">https://www.github.com/twitter/{{ item.name[0] }}/issues/{{ item.issue_id }}</a></li>
       <li class="divider" role="presentation"></li>
     </ul>
   </div>
@@ -20,7 +20,8 @@ export default {
 
     url(item) {
       console.log('Item is here:')
-      console.log(item)
+      console.log(item) //1, etc
+      //replace 'item ' with this.values[item].name[0]s
       var url = "https://www.github.com/twitter/" + item.name[0] + "/issues/" + item.issue_id
       return url
     },
