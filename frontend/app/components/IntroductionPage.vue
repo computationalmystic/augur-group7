@@ -4,13 +4,23 @@
     <div>
     <h2 style="display: inline-block; color: black !important">{{ $store.state.gitRepo }}</h2>
     </div>
+    <h4>Description</h4>
+    <div class="col col-6">
+      <language-list source="getLanguage"
+        title="Project Languages">
+      </language-list>
+    </div>
+    <h4>Languages</h4>  
+    <div class="col col-6">
+      <description-list source="getDescription"
+        title="Project Description">
+      </description-list>
+    </div>
       <div class="input">
-        <h4>Description</h4>
         <textarea rows="5">
         </textarea> 
       </div>
       <div class="input">
-        <h4>Languages</h4>  
         <textarea rows="5">
         </textarea> 
       </div>
@@ -27,16 +37,6 @@
       <h4>Community Metrics:</h4>
       </div>
   <div class="row">
-    <div class="col col-6">
-      <language-list source="getLanguage"
-        title="Project Languages">
-      </language-list>
-    </div>
-    <div class="col col-6">
-      <description-list source="getDescription"
-        title="Project Description">
-      </description-list>
-    </div>
     <div class="col col-6">
       <dynamic-line-chart source="communityEngagement:issues_open"
         title="Community Engagement: Open Issues"
