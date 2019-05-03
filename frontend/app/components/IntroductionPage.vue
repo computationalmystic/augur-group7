@@ -23,10 +23,7 @@
   </div>
   <div id="row">  
       <div class="input">
-        <textarea rows="5">
-        </textarea> 
-      </div>
-      <div class="input">
+        <h4>Edit Description</h4>/
         <textarea rows="5">
         </textarea> 
       </div>
@@ -113,7 +110,7 @@ module.exports = {
     font-size: 1.2em;
   }
   .results {
-    background: white;
+    background: grey;
   }
   .container {
     overflow: hidden;
