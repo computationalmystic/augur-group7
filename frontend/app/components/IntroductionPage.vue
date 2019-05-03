@@ -20,14 +20,13 @@
           </language-list>
         </div>
     </div>
-  </div>
-  <div id="row">  
-      <div class="input">
-        <h4>Edit Description</h4>
-  <div id="editor">
-    <textarea :value="input" @input="update"></textarea>
-  <div v-html="compiledMarkdown"></div>
-</div>
+  </div> 
+  <div class="input">
+    <h4>Edit Description</h4>
+    <div id="editor">
+      <textarea :value="input" @input="update"></textarea>
+      <div v-html="compiledMarkdown"></div>
+    </div>
   </div> 
     <div id="issues">
       <h4>Issues For Newcomers</h4>
