@@ -25,7 +25,7 @@
     <h4>Edit Description</h4>
     <div id="editor">
       <textarea :value="input" @input="update"></textarea>
-      <div v-html="compiledMarkdown"></div>
+      <compiled-markdown></compiled-markdown>
     </div>
   </div> 
     <div id="issues">
