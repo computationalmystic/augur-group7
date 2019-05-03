@@ -88,7 +88,7 @@ module.exports = {
     DynamicLineChart,
     LanguageList,
     DescriptionList,
-    IssueList
+    IssueList,
     compiledMarkdown
   }
 };
