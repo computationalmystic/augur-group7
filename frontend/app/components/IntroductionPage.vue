@@ -76,6 +76,7 @@ import DynamicLineChart from './charts/DynamicLineChart'
 import LanguageList from './charts/LanguageList'
 import DescriptionList from './charts/DescriptionList'
 import IssueList from './charts/IssueList'
+import compiledMarkdown from 'compiledMarkdown'
 
 module.exports = {
   data() {
@@ -88,6 +89,7 @@ module.exports = {
     LanguageList,
     DescriptionList,
     IssueList
+    compiledMarkdown
   }
 };
 
