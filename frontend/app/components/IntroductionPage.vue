@@ -110,7 +110,7 @@ module.exports = {
     font-size: 1.2em;
   }
   .results {
-    background: lightgray;
+    background: #d4d4d4;
   }
   .container {
     overflow: hidden;
