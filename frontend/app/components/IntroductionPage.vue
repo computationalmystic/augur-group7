@@ -67,6 +67,9 @@
 
 </template>
 
+<script src="https://unpkg.com/marked@0.3.6"></script>
+<script src="https://unpkg.com/lodash@4.16.0"></script>
+
 <script>
 
 import DynamicLineChart from './charts/DynamicLineChart'
@@ -89,9 +92,6 @@ module.exports = {
 };
 
 </script>
-
-<script src="https://unpkg.com/marked@0.3.6"></script>
-<script src="https://unpkg.com/lodash@4.16.0"></script>
 
 <style scoped>
 
