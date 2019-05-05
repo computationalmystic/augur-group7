@@ -56,11 +56,7 @@ git clone https://github.com/computationalmystic/augur-group7.git
 * Clone our repository by: ```git clone https://github.com/computationalmystic/augur-group7.git```
 * ```cd augur-group7```
 * ```make install-dev```
-
-
-* run the augur ```augur``` --update from here
-
-
+* run the augur ```augur```
 * Edit augur.config.json ```vim augur.config.json```
 * Start the frontend and backend server: ```make dev```
 * In your url, go to ```http://localhost:3333```
