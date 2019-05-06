@@ -133,6 +133,50 @@ class GHTorrent(object):
             userid = row[0]
         return userid
 
+    @annotate(tag='getLanguage')
+    def getLanguage(self, owner, repo):
+        """
+        Returns the languages used given a project id
+
+        :param project_id: GitHub project id to be matched against languages table
+        :return: The languages from the users table in GHTorrent
+        """
+        repoid=self.repoid(owner,repo)
+        reposql = s.sql.text('SELECT DISTINCT project_languages.language FROM project_languages WHERE project_languages.project_id = :repoid')
+        return pd.read_sql(reposql, self.db, params={"repoid": str(repoid)})
+
+    @annotate(tag='getDescription')
+    def getDescription(self, owner, repo):
+        """
+        Returns the languages used given a project id
+
+        :param project_id: GitHub project id to be matched against languages table
+        :return: The languages from the users table in GHTorrent
+        """
+        repoid=self.repoid(owner,repo)
+        reposql = s.sql.text('SELECT projects.description FROM projects WHERE projects.id = :repoid')
+        return pd.read_sql(reposql, self.db, params={"repoid": str(repoid)})
+
+    @annotate(tag='getIssues')
+    def getIssues(self, owner, repo):
+        """
+        Returns the languages used given a project id
+
+        :param project_id: GitHub project id to be matched against languages table
+        :return: The languages from the users table in GHTorrent
+        """
+        repoid=self.repoid(owner,repo)
+        reposql = s.sql.text('SELECT projects.name FROM projects WHERE projects.id = :repoid')
+        reposql2 = s.sql.text('SELECT issues.issue_id  FROM issues WHERE issues.repo_id = :repoid ORDER BY issues.created_at DESC LIMIT 5')
+        repoJSON = pd.read_sql(reposql, self.db, params={"repoid": str(repoid)})
+        repoJSON2 = pd.read_sql(reposql2, self.db, params={"repoid": str(repoid)})
+        repoName = repoJSON['name']
+       # newDf = pd.DataFrame({"issue_id": repoJSON2['issue_id'], "name": repoJSON['name']})
+        newDF = pd.DataFrame({"issue_id": repoJSON2['issue_id']})
+        newDF['name'] = pd.Series([repoName for x in range(len(newDF.index))], index=newDF.index)
+       # newDF.assign(name = repoName)
+        return newDF
+
     #####################################
     ###    DIVERSITY AND INCLUSION    ###
     #####################################
