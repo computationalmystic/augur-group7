@@ -95,6 +95,9 @@ make dev
 ### Local Installation
 To contribute to our code base routinely, we recommended that developers configure Augur on their local workstations. Start [here](http://augur.augurlabs.io/static/docs/dev-guide/1-overview.html) to get a primer on the project, or jump straight into our [local installation instructions](http://augur.augurlabs.io/static/docs/dev-guide/2-install.html) for developers.
 
+## End Goals
+We hope to deliver code at the end of this project that will allow people who use Augur a better/ more concise way of introducing newcomers to an open source project. This is done through listing a description of the project, ideally editable by the community managers of the project, listing the languages that the project uses, new issues that a newcomer can contribute to, and relevant metrics to track the community health and activity in terms of watchers and issues.
+
 ## Guidelines
 To contribute to Augur, please check out our [development guide](http://augur.augurlabs.io/static/docs/dev-guide/1-overview.html) and [notes on making contributions](CONTRIBUTING.md). Also, please note our [code of conduct](CODE_OF_CONDUCT.md). We want Augur to be a welcoming development community that is open to everyone. 
 
