@@ -18,6 +18,7 @@ git clone https://github.com/computationalmystic/augur-group7.git
 
     },
 ```
+This changes the DB ^
 
 ## Decide how you want to run Augur:
 * Vagrant VM (Mac)
