@@ -1,44 +1,35 @@
 <template>
 <section>
-  <div class="container">
-    <div>
-    <h2 style="display: inline-block; color: black !important">{{ $store.state.gitRepo }}</h2>
-    </div>
-      <div class="a">
+  <div id="row">
+    <h3>Introduction Page</h3>
+      <div class="col col-6 input">
         <h4>Description</h4>
-        <div class="results">
-          <description-list source="getDescription"
-            title="Project Description">
-          </description-list>
-        </div>
-    </div>
-      <div class="a">
-        <h4>Languages</h4>
-        <div class="results">
-          <language-list source="getLanguage"
-            title="Project Languages">
-          </language-list>
-        </div>
-    </div>
-  </div> 
-  <div class="input">
-    <h4>Edit Description</h4>
-    <div id="editor">
-      <textarea :value="input" @input="update"></textarea>
-      <compiled-markdown></compiled-markdown>
-    </div>
-  </div> 
-    <div id="issues">
+        <textarea rows="4" cols="50">
+
+        </textarea> 
+
+        <form>
+          <div id="submit_button">
+            <button class="submit" type="submit">Submit</button>
+          </div>
+        </form>
+      </div>
+      <div class="col col-6 input">    
+        <h4>Languages</h4>  
+        <textarea rows="4" cols="50">
+
+        </textarea> 
+
+        <form>
+          <div id="submit_button">
+            <button class="submit" type="submit">Submit</button>
+          </div>
+        </form>
+      </div>
+      <div id="issues">
       <h4>Issues For Newcomers</h4>
-      <div class="results">
-        <issue-list source="getIssues"
-          title="Project Issues">s
-        </issue-list>
       </div>
-    </div>
-      <div>
-      <h4>Community Metrics:</h4>
-      </div>
+  </div>
   <div class="row">
     <div class="col col-6">
       <dynamic-line-chart source="communityEngagement:issues_open"
@@ -67,16 +58,9 @@
 
 </template>
 
-<script src="https://unpkg.com/marked@0.3.6"></script>
-<script src="https://unpkg.com/lodash@4.16.0"></script>
-
 <script>
 
 import DynamicLineChart from './charts/DynamicLineChart'
-import LanguageList from './charts/LanguageList'
-import DescriptionList from './charts/DescriptionList'
-import IssueList from './charts/IssueList'
-import compiledMarkdown from './compiledMarkdown'
 
 module.exports = {
   data() {
@@ -85,11 +69,7 @@ module.exports = {
     }
   },
   components: {
-    DynamicLineChart,
-    LanguageList,
-    DescriptionList,
-    IssueList,
-    compiledMarkdown
+    DynamicLineChart
   }
 };
 
@@ -99,52 +79,6 @@ module.exports = {
 
   .input {
    display: inline-block;
-   width: 49%;
-   padding-bottom: 50px;
-   padding-top: 50px;
-  }
-  .a {
-    display: inline-block;
-    vertical-align: top;
-    width: 49%;
-    font-size: 1.2em;
-  }
-  .results {
-    background:  #eaeaea;
-  }
-  .container {
-    overflow: hidden;
-  }
-
-  html, body, #editor {
-    margin: 0;
-    height: 100%;
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    color: #333;
-  }
-
-  textarea, #editor div {
-    display: inline-block;
-    width: 49%;
-    height: 100%;
-    vertical-align: top;
-    box-sizing: border-box;
-    padding: 0 20px;
-  }
-
-  textarea {
-    border: none;
-    border-right: 1px solid #ccc;
-    resize: none;
-    outline: none;
-    background-color: #f6f6f6;
-    font-size: 14px;
-    font-family: 'Monaco', courier, monospace;
-    padding: 20px;
-  }
-
-  code {
-    color: #f66;
   }
 
 </style>

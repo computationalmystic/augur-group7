@@ -63,10 +63,6 @@ def create_routes(server):
                             }
                         ]
     """
-    @server.app.route('/{}/shutdown'.format(server.api_version), methods=['POST'])
-    def post_data():
-        return("posting data")
-
     server.addTimeseries(ghtorrent.code_commits, 'commits')
 
     """
@@ -834,6 +830,3 @@ def create_routes(server):
                         status=200,
                         mimetype="application/json")
     # server.updateMetricMetadata(ghtorrent.ghtorrent_range, '/{}/ghtorrent_range'.format(server.api_version))
-    server.addMetric(ghtorrent.getLanguage, 'getLanguage')
-    server.addMetric(ghtorrent.getDescription, 'getDescription')
-    server.addMetric(ghtorrent.getIssues, 'getIssues')
