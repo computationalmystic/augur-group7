@@ -1,10 +1,10 @@
 # Augur: Group 7
-
 branch | status
    --- | ---
 master | [![Build Status](https://travis-ci.org/chaoss/augur.svg?branch=master)](https://travis-ci.org/chaoss/augur)
    dev | [![Build Status](https://travis-ci.org/chaoss/augur.svg?branch=dev)](https://travis-ci.org/chaoss/augur)
-
+## Link to the Live System:
+http://ec2-52-55-115-113.compute-1.amazonaws.com:3333/single/github.com%2Ftwitter%2Ftwemoji/intro#
 ## About Augur
 
 Augur is focused on prototyping open source software metrics. 
